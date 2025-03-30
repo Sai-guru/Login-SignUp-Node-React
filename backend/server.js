@@ -33,6 +33,9 @@ app.post("/login", (req, res) => {
     res.json({ message: "Login successful", user: { username } });
 });
 
+app.get('/',(req,res)=> {
+    res.send("Hello World from Backend!");
+})
 // Start Server
 app.listen(PORT, () => {
     console.log(`Backend running on http://localhost:${PORT}`);
